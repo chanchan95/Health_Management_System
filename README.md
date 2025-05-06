@@ -78,9 +78,11 @@ Hospital Management, MERN Stack, MongoDB, Express.js, React, Node.js, Healthcare
 Niraj Kumar [Github](https://github.com/meniraj07)
 
 # Deployment Links
-[Prescripto Patient Panel](https://prescripto-hospital-management-system-2dlr.onrender.com)
+[Prescripto Backend](https://prescriptobackend-4ylq.onrender.com)
 
-[Prescripto Admin/Doctor Panel](https://prescripto-hospital-management-system-dmls.onrender.com)
+[Prescripto Patient Panel](https://prescripto-hospital-management-system.vercel.app/)
+
+[Prescripto Admin/Doctor Panel](https://prescripto-hospital-management-system-c29o.vercel.app/)
 
 # Contact
 For any questions or feedback, please contact [Niraj Kumar](https://www.linkedin.com/in/nirajkumar-nk/)
