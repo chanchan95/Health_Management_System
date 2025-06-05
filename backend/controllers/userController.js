@@ -19,21 +19,19 @@ const razorpayInstance = new razorpay({
 const registerUser = async (req, res) => {
 
     try {
-        const { name, email, password } = req.body;
-
-        // checking for all data to register user
+        const { name, email, password } = req.body;        // checking for all data to register user
         if (!name || !email || !password) {
-            return res.json({ success: false, message: 'Missing Details' })
+            return res.json({ success: false, message: 'Thiếu thông tin' })
         }
 
         // validating email format
         if (!validator.isEmail(email)) {
-            return res.json({ success: false, message: "Please enter a valid email" })
+            return res.json({ success: false, message: "Vui lòng nhập email hợp lệ" })
         }
 
         // validating strong password
         if (password.length < 8) {
-            return res.json({ success: false, message: "Please enter a strong password" })
+            return res.json({ success: false, message: "Vui lòng nhập mật khẩu mạnh" })
         }
 
         // hashing user password
@@ -61,12 +59,11 @@ const registerUser = async (req, res) => {
 // API to login user
 const loginUser = async (req, res) => {
 
-    try {
-        const { email, password } = req.body;
+    try {        const { email, password } = req.body;
         const user = await userModel.findOne({ email })
 
         if (!user) {
-            return res.json({ success: false, message: "User does not exist" })
+            return res.json({ success: false, message: "Người dùng không tồn tại" })
         }
 
         const isMatch = await bcrypt.compare(password, user.password)
@@ -76,7 +73,7 @@ const loginUser = async (req, res) => {
             res.json({ success: true, token })
         }
         else {
-            res.json({ success: false, message: "Invalid credentials" })
+            res.json({ success: false, message: "Thông tin đăng nhập không hợp lệ" })
         }
     } catch (error) {
         console.log(error)
@@ -102,13 +99,11 @@ const getProfile = async (req, res) => {
 // API to update user profile
 const updateProfile = async (req, res) => {
 
-    try {
-
-        const { userId, name, phone, address, dob, gender } = req.body
+    try {        const { userId, name, phone, address, dob, gender } = req.body
         const imageFile = req.file
 
         if (!name || !phone || !dob || !gender) {
-            return res.json({ success: false, message: "Data Missing" })
+            return res.json({ success: false, message: "Thiếu dữ liệu" })
         }
 
         await userModel.findByIdAndUpdate(userId, { name, phone, address: JSON.parse(address), dob, gender })
@@ -122,7 +117,7 @@ const updateProfile = async (req, res) => {
             await userModel.findByIdAndUpdate(userId, { image: imageURL })
         }
 
-        res.json({ success: true, message: 'Profile Updated' })
+        res.json({ success: true, message: 'Cập nhật hồ sơ thành công' })
 
     } catch (error) {
         console.log(error)
@@ -133,13 +128,11 @@ const updateProfile = async (req, res) => {
 // API to book appointment 
 const bookAppointment = async (req, res) => {
 
-    try {
-
-        const { userId, docId, slotDate, slotTime } = req.body
+    try {        const { userId, docId, slotDate, slotTime } = req.body
         const docData = await doctorModel.findById(docId).select("-password")
 
         if (!docData.available) {
-            return res.json({ success: false, message: 'Doctor Not Available' })
+            return res.json({ success: false, message: 'Bác sĩ không có sẵn' })
         }
 
         let slots_booked = docData.slots_booked
@@ -147,7 +140,7 @@ const bookAppointment = async (req, res) => {
         // checking for slot availablity 
         if (slots_booked[slotDate]) {
             if (slots_booked[slotDate].includes(slotTime)) {
-                return res.json({ success: false, message: 'Slot Not Available' })
+                return res.json({ success: false, message: 'Khung giờ không có sẵn' })
             }
             else {
                 slots_booked[slotDate].push(slotTime)
@@ -178,7 +171,7 @@ const bookAppointment = async (req, res) => {
         // save new slots data in docData
         await doctorModel.findByIdAndUpdate(docId, { slots_booked })
 
-        res.json({ success: true, message: 'Appointment Booked' })
+        res.json({ success: true, message: 'Đặt lịch hẹn thành công' })
 
     } catch (error) {
         console.log(error)
@@ -196,7 +189,7 @@ const cancelAppointment = async (req, res) => {
 
         // verify appointment user 
         if (appointmentData.userId !== userId) {
-            return res.json({ success: false, message: 'Unauthorized action' })
+            return res.json({ success: false, message: 'Hành động không được phép' })
         }
 
         await appointmentModel.findByIdAndUpdate(appointmentId, { cancelled: true })
@@ -212,7 +205,7 @@ const cancelAppointment = async (req, res) => {
 
         await doctorModel.findByIdAndUpdate(docId, { slots_booked })
 
-        res.json({ success: true, message: 'Appointment Cancelled' })
+        res.json({ success: true, message: 'Hủy lịch hẹn thành công' })
 
     } catch (error) {
         console.log(error)

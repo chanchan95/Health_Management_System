@@ -6,13 +6,11 @@ import appointmentModel from "../models/appointmentModel.js";
 // API for doctor Login 
 const loginDoctor = async (req, res) => {
 
-    try {
-
-        const { email, password } = req.body
+    try {        const { email, password } = req.body
         const user = await doctorModel.findOne({ email })
 
         if (!user) {
-            return res.json({ success: false, message: "Invalid credentials" })
+            return res.json({ success: false, message: "Thông tin đăng nhập không hợp lệ" })
         }
 
         const isMatch = await bcrypt.compare(password, user.password)
@@ -21,7 +19,7 @@ const loginDoctor = async (req, res) => {
             const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET)
             res.json({ success: true, token })
         } else {
-            res.json({ success: false, message: "Invalid credentials" })
+            res.json({ success: false, message: "Thông tin đăng nhập không hợp lệ" })
         }
 
 
@@ -55,10 +53,10 @@ const appointmentCancel = async (req, res) => {
         const appointmentData = await appointmentModel.findById(appointmentId)
         if (appointmentData && appointmentData.docId === docId) {
             await appointmentModel.findByIdAndUpdate(appointmentId, { cancelled: true })
-            return res.json({ success: true, message: 'Appointment Cancelled' })
+            return res.json({ success: true, message: 'Hủy lịch hẹn thành công' })
         }
 
-        res.json({ success: false, message: 'Appointment Cancelled' })
+        res.json({ success: false, message: 'Hủy lịch hẹn thất bại' })
 
     } catch (error) {
         console.log(error)
@@ -76,7 +74,7 @@ const appointmentComplete = async (req, res) => {
         const appointmentData = await appointmentModel.findById(appointmentId)
         if (appointmentData && appointmentData.docId === docId) {
             await appointmentModel.findByIdAndUpdate(appointmentId, { isCompleted: true })
-            return res.json({ success: true, message: 'Appointment Completed' })
+            return res.json({ success: true, message: 'Hoàn thành lịch hẹn thành công' })
         }
 
         res.json({ success: false, message: 'Appointment Cancelled' })

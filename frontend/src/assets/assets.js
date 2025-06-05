@@ -60,240 +60,225 @@ export const assets = {
 
 export const specialityData = [
     {
-        speciality: 'General physician',
+        speciality: 'Bác sĩ Đa khoa',
         image: General_physician
     },
     {
-        speciality: 'Gynecologist',
+        speciality: 'Bác sĩ Phụ khoa',
         image: Gynecologist
     },
     {
-        speciality: 'Dermatologist',
+        speciality: 'Bác sĩ Da liễu',
         image: Dermatologist
     },
     {
-        speciality: 'Pediatricians',
+        speciality: 'Bác sĩ Nhi khoa',
         image: Pediatricians
     },
     {
-        speciality: 'Neurologist',
+        speciality: 'Bác sĩ Thần kinh',
         image: Neurologist
     },
     {
-        speciality: 'Gastroenterologist',
+        speciality: 'Bác sĩ Tiêu hóa',
         image: Gastroenterologist
     },
 ]
 
-export const doctors = [
-    {
+export const doctors = [    {
         _id: 'doc1',
-        name: 'Dr. Richard James',
+        name: 'BS. Nguyễn Văn Hùng',
         image: doc1,
-        speciality: 'General physician',
+        speciality: 'Bác sĩ đa khoa',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Richard James has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Nguyễn Văn Hùng có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Nguyễn Văn Hùng có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '17th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 17 Đường Lê Lợi',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc2',
-        name: 'Dr. Emily Larson',
+        name: 'BS. Lê Thị Mai',
         image: doc2,
-        speciality: 'Gynecologist',
+        speciality: 'Phụ khoa',
         degree: 'MBBS',
-        experience: '3 Years',
-        about: 'Dr. Emily Larson has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Emily Larson has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '3 Năm',
+        about: 'BS. Lê Thị Mai có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Lê Thị Mai có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 60,
         address: {
-            line1: '27th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 27 Đường Nguyễn Huệ',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc3',
-        name: 'Dr. Sarah Patel',
+        name: 'BS. Trần Thị Hồng',
         image: doc3,
-        speciality: 'Dermatologist',
+        speciality: 'Da liễu',
         degree: 'MBBS',
-        experience: '1 Year',
-        about: 'Dr. Sarah Patel has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Sarah Patel has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '1 Năm',
+        about: 'BS. Trần Thị Hồng có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Trần Thị Hồng có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 30,
         address: {
-            line1: '37th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 37 Đường Trần Hưng Đạo',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc4',
-        name: 'Dr. Christopher Lee',
+        name: 'BS. Phạm Văn Nam',
         image: doc4,
-        speciality: 'Pediatricians',
+        speciality: 'Nhi khoa',
         degree: 'MBBS',
-        experience: '2 Years',
-        about: 'Dr. Christopher Lee has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Christopher Lee has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '2 Năm',
+        about: 'BS. Phạm Văn Nam có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Phạm Văn Nam có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 40,
         address: {
-            line1: '47th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 47 Đường Lý Tự Trọng',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc5',
-        name: 'Dr. Jennifer Garcia',
+        name: 'BS. Nguyễn Thị Lan',
         image: doc5,
-        speciality: 'Neurologist',
+        speciality: 'Thần kinh',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Jennifer Garcia has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Jennifer Garcia has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Nguyễn Thị Lan có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Nguyễn Thị Lan có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '57th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 57 Đường Pasteur',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc6',
-        name: 'Dr. Andrew Williams',
+        name: 'BS. Vũ Minh Tuấn',
         image: doc6,
-        speciality: 'Neurologist',
+        speciality: 'Thần kinh',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Andrew Williams has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Andrew Williams has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Vũ Minh Tuấn có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Vũ Minh Tuấn có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '57th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 67 Đường Hai Bà Trưng',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc7',
-        name: 'Dr. Christopher Davis',
+        name: 'BS. Đặng Văn Minh',
         image: doc7,
-        speciality: 'General physician',
+        speciality: 'Bác sĩ đa khoa',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Christopher Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Christopher Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Đặng Văn Minh có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Đặng Văn Minh có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '17th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 17 Đường Đồng Khởi',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc8',
-        name: 'Dr. Timothy White',
+        name: 'BS. Hoàng Thị Ánh',
         image: doc8,
-        speciality: 'Gynecologist',
+        speciality: 'Phụ khoa',
         degree: 'MBBS',
-        experience: '3 Years',
-        about: 'Dr. Timothy White has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Timothy White has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '3 Năm',
+        about: 'BS. Hoàng Thị Ánh có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Hoàng Thị Ánh có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 60,
         address: {
-            line1: '27th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 27 Đường Cách Mạng Tháng 8',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc9',
-        name: 'Dr. Ava Mitchell',
+        name: 'BS. Bùi Thị Thu',
         image: doc9,
-        speciality: 'Dermatologist',
+        speciality: 'Da liễu',
         degree: 'MBBS',
-        experience: '1 Year',
-        about: 'Dr. Ava Mitchell has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Ava Mitchell has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '1 Năm',
+        about: 'BS. Bùi Thị Thu có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Bùi Thị Thu có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 30,
         address: {
-            line1: '37th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 37 Đường Nam Kỳ Khởi Nghĩa',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc10',
-        name: 'Dr. Jeffrey King',
+        name: 'BS. Ngô Văn Đức',
         image: doc10,
-        speciality: 'Pediatricians',
+        speciality: 'Nhi khoa',
         degree: 'MBBS',
-        experience: '2 Years',
-        about: 'Dr. Jeffrey King has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Jeffrey King has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '2 Năm',
+        about: 'BS. Ngô Văn Đức có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Ngô Văn Đức có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 40,
         address: {
-            line1: '47th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 47 Đường Võ Văn Tần',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc11',
-        name: 'Dr. Zoe Kelly',
+        name: 'BS. Lê Thị Hoa',
         image: doc11,
-        speciality: 'Gastroenterologist',
+        speciality: 'Tiêu hóa',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Zoe Kelly has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Zoe Kelly has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Lê Thị Hoa có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Lê Thị Hoa có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '57th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 57 Đường Điện Biên Phủ',
+            line2: 'Quận Bình Thạnh, TP. Hồ Chí Minh'
         }
-    },
-    {
+    },    {
         _id: 'doc12',
-        name: 'Dr. Patrick Harris',
+        name: 'BS. Trần Văn Hải',
         image: doc12,
-        speciality: 'Neurologist',
+        speciality: 'Thần kinh',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Patrick Harris has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Patrick Harris has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Trần Văn Hải có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Trần Văn Hải có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '57th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 67 Đường Nguyễn Thị Minh Khai',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc13',
-        name: 'Dr. Chloe Evans',
+        name: 'BS. Võ Thị Kim',
         image: doc13,
-        speciality: 'General physician',
+        speciality: 'Bác sĩ đa khoa',
         degree: 'MBBS',
-        experience: '4 Years',
-        about: 'Dr. Chloe Evans has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Chloe Evans has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '4 Năm',
+        about: 'BS. Võ Thị Kim có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Võ Thị Kim có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 50,
         address: {
-            line1: '17th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 17 Đường Bến Vân Đồn',
+            line2: 'Quận 4, TP. Hồ Chí Minh'
         }
-    },
-    {
+    },    {
         _id: 'doc14',
-        name: 'Dr. Ryan Martinez',
+        name: 'BS. Phan Văn Long',
         image: doc14,
-        speciality: 'Gynecologist',
+        speciality: 'Phụ khoa',
         degree: 'MBBS',
-        experience: '3 Years',
-        about: 'Dr. Ryan Martinez has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Ryan Martinez has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '3 Năm',
+        about: 'BS. Phan Văn Long có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Phan Văn Long có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 60,
         address: {
-            line1: '27th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 27 Đường Võ Thị Sáu',
+            line2: 'Hà Nội, Việt Nam'
         }
-    },
-    {
+    },    {
         _id: 'doc15',
-        name: 'Dr. Amelia Hill',
+        name: 'BS. Nguyễn Thị Xuân',
         image: doc15,
-        speciality: 'Dermatologist',
+        speciality: 'Da liễu',
         degree: 'MBBS',
-        experience: '1 Year',
-        about: 'Dr. Amelia Hill has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Amelia Hill has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
+        experience: '1 Năm',
+        about: 'BS. Nguyễn Thị Xuân có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện, tập trung vào y học dự phòng, chẩn đoán sớm và các chiến lược điều trị hiệu quả. BS. Nguyễn Thị Xuân có cam kết mạnh mẽ trong việc cung cấp dịch vụ chăm sóc y tế toàn diện.',
         fees: 30,
         address: {
-            line1: '37th Cross, Richmond',
-            line2: 'Circle, Ring Road, London'
+            line1: 'Số 37 Đường Lê Văn Sỹ',
+            line2: 'Quận Phú Nhuận, TP. Hồ Chí Minh'
         }
     },
 ]

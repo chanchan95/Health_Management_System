@@ -67,18 +67,17 @@ const MyProfile = () => {
             <hr className='bg-[#ADADAD] h-[1px] border-none' />
 
             <div>
-                <p className='text-gray-600 underline mt-3'>CONTACT INFORMATION</p>
-                <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-[#363636]'>
-                    <p className='font-medium'>Email id:</p>
+                <p className='text-gray-600 underline mt-3'>THÔNG TIN LIÊN HỆ</p>
+                <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-[#363636]'>                    <p className='font-medium'>ID Email:</p>
                     <p className='text-blue-500'>{userData.email}</p>
-                    <p className='font-medium'>Phone:</p>
+                    <p className='font-medium'>Điện thoại:</p>
 
                     {isEdit
                         ? <input className='bg-gray-50 max-w-52' type="text" onChange={(e) => setUserData(prev => ({ ...prev, phone: e.target.value }))} value={userData.phone} />
                         : <p className='text-blue-500'>{userData.phone}</p>
                     }
 
-                    <p className='font-medium'>Address:</p>
+                    <p className='font-medium'>Địa chỉ:</p>
 
                     {isEdit
                         ? <p>
@@ -91,20 +90,19 @@ const MyProfile = () => {
                 </div>
             </div>
             <div>
-                <p className='text-[#797979] underline mt-3'>BASIC INFORMATION</p>
-                <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-gray-600'>
-                    <p className='font-medium'>Gender:</p>
+                <p className='text-[#797979] underline mt-3'>THÔNG TIN CƠ BẢN</p>
+                <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-gray-600'>                    <p className='font-medium'>Giới tính:</p>
 
                     {isEdit
                         ? <select className='max-w-20 bg-gray-50' onChange={(e) => setUserData(prev => ({ ...prev, gender: e.target.value }))} value={userData.gender} >
-                            <option value="Not Selected">Not Selected</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
+                            <option value="Not Selected">Chưa chọn</option>
+                            <option value="Male">Nam</option>
+                            <option value="Female">Nữ</option>
                         </select>
-                        : <p className='text-gray-500'>{userData.gender}</p>
+                        : <p className='text-gray-500'>{userData.gender === 'Male' ? 'Nam' : userData.gender === 'Female' ? 'Nữ' : 'Chưa chọn'}</p>
                     }
 
-                    <p className='font-medium'>Birthday:</p>
+                    <p className='font-medium'>Ngày sinh:</p>
 
                     {isEdit
                         ? <input className='max-w-28 bg-gray-50' type='date' onChange={(e) => setUserData(prev => ({ ...prev, dob: e.target.value }))} value={userData.dob} />
@@ -113,11 +111,9 @@ const MyProfile = () => {
 
                 </div>
             </div>
-            <div className='mt-10'>
-
-                {isEdit
-                    ? <button onClick={updateUserProfileData} className='border border-primary px-8 py-2 rounded-full hover:bg-primary hover:text-white transition-all'>Save information</button>
-                    : <button onClick={() => setIsEdit(true)} className='border border-primary px-8 py-2 rounded-full hover:bg-primary hover:text-white transition-all'>Edit</button>
+            <div className='mt-10'>                {isEdit
+                    ? <button onClick={updateUserProfileData} className='border border-primary px-8 py-2 rounded-full hover:bg-primary hover:text-white transition-all'>Lưu thông tin</button>
+                    : <button onClick={() => setIsEdit(true)} className='border border-primary px-8 py-2 rounded-full hover:bg-primary hover:text-white transition-all'>Chỉnh sửa</button>
                 }
 
             </div>

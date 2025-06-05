@@ -14,9 +14,8 @@ const loginAdmin = async (req, res) => {
 
         if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
             const token = jwt.sign(email + password, process.env.JWT_SECRET)
-            res.json({ success: true, token })
-        } else {
-            res.json({ success: false, message: "Invalid credentials" })
+            res.json({ success: true, token })        } else {
+            res.json({ success: false, message: "Thông tin đăng nhập không hợp lệ" })
         }
 
     } catch (error) {
@@ -48,7 +47,7 @@ const appointmentCancel = async (req, res) => {
         const { appointmentId } = req.body
         await appointmentModel.findByIdAndUpdate(appointmentId, { cancelled: true })
 
-        res.json({ success: true, message: 'Appointment Cancelled' })
+        res.json({ success: true, message: 'Hủy lịch hẹn thành công' })
 
     } catch (error) {
         console.log(error)
@@ -63,21 +62,19 @@ const addDoctor = async (req, res) => {
     try {
 
         const { name, email, password, speciality, degree, experience, about, fees, address } = req.body
-        const imageFile = req.file
-
-        // checking for all data to add doctor
+        const imageFile = req.file        // checking for all data to add doctor
         if (!name || !email || !password || !speciality || !degree || !experience || !about || !fees || !address) {
-            return res.json({ success: false, message: "Missing Details" })
+            return res.json({ success: false, message: "Thiếu thông tin" })
         }
 
         // validating email format
         if (!validator.isEmail(email)) {
-            return res.json({ success: false, message: "Please enter a valid email" })
+            return res.json({ success: false, message: "Vui lòng nhập email hợp lệ" })
         }
 
         // validating strong password
         if (password.length < 8) {
-            return res.json({ success: false, message: "Please enter a strong password" })
+            return res.json({ success: false, message: "Vui lòng nhập mật khẩu mạnh" })
         }
 
         // hashing user password
@@ -104,7 +101,7 @@ const addDoctor = async (req, res) => {
 
         const newDoctor = new doctorModel(doctorData)
         await newDoctor.save()
-        res.json({ success: true, message: 'Doctor Added' })
+        res.json({ success: true, message: 'Thêm bác sĩ thành công' })
 
     } catch (error) {
         console.log(error)
