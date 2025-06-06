@@ -34,20 +34,31 @@ const AppContextProvider = (props) => {
 
     // Getting User Profile using API
     const loadUserProfileData = async () => {
-
         try {
-
             const { data } = await axios.get(backendUrl + '/api/user/get-profile', { headers: { token } })
 
             if (data.success) {
                 setUserData(data.userData)
             } else {
-                toast.error(data.message)
+                // Nếu token invalid, clear token và không hiện toast
+                if (data.message.includes('invalid') || data.message.includes('Invalid')) {
+                    localStorage.removeItem('token')
+                    setToken('')
+                    setUserData(false)
+                } else {
+                    toast.error(data.message)
+                }
             }
-
         } catch (error) {
             console.log(error)
-            toast.error(error.message)
+            // Nếu lỗi 401 hoặc 403, clear token
+            if (error.response?.status === 401 || error.response?.status === 403) {
+                localStorage.removeItem('token')
+                setToken('')
+                setUserData(false)
+            } else {
+                toast.error(error.message)
+            }
         }
 
     }
