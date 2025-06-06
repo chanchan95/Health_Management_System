@@ -9,7 +9,7 @@
 }
 
 .active hr {
-    @apply block
+    display: block;
 }
 
 @media (max-width:740px) {

@@ -8,7 +8,8 @@ const Contact = () => {
       </div>
 
       <div className='my-10 flex flex-col justify-center md:flex-row gap-10 mb-28 text-sm'>
-        <img className='w-full md:max-w-[360px]' src={assets.contact_image} alt="" />        <div className='flex flex-col justify-center items-start gap-6'>
+        <img className='w-full md:max-w-[360px]' src="https://vcdn1-suckhoe.vnecdn.net/2018/08/22/bac-si-Vo-Tan-Duc-1671-1533712-2855-6485-1534923827.jpg?w=460&h=0&q=100&dpr=2&fit=crop&s=G9hgSGPSUDfAXPUcPbZZLw" alt="" />
+        <div className='flex flex-col justify-center items-start gap-6'>
           <p className=' font-semibold text-lg text-gray-600'>VĂN PHÒNG CỦA CHÚNG TÔI</p>
           <p className=' text-gray-500'>32 Đường Chiến Thắng <br /> Quận Hà Đông, Hà Nội, Việt Nam</p>
           <p className=' text-gray-500'>Tel: +84-123-456-789 <br /> Email: trangtrang9503@gmail.com</p>

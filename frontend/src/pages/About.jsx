@@ -4,11 +4,12 @@ import { assets } from '../assets/assets'
 const About = () => {
   return (
     <div>        <div className='text-center text-2xl pt-10 text-gray-500'>
-            <p>GIỚI THIỆU <span className='text-gray-700 font-medium'>VỀ CHÚNG TÔI</span></p>
+            <p><span className='text-gray-700 font-medium'>GIỚI THIỆU VỀ CHÚNG TÔI</span></p>
         </div>
         <div className='my-10 flex flex-col md:flex-row gap-12'>
-            <img className='w-full md:max-w-[360px]' src={assets.about_image} alt="" />
-            <div className='flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600'>                <p>Chào mừng đến với Hệ thống Chăm sóc sức khoẻ, đối tác đáng tin cậy của bạn trong việc quản lý nhu cầu chăm sóc sức khỏe  một cách thuận tiện và hiệu quả.
+            <img className='w-full md:max-w-[360px]' src="https://img.lsvn.vn/vne-news/April2023/kham-suc-khoe-tong-quat-bac-ha-1.jpg" alt="" />
+            <div className='flex flex-col justify-center gap-6 md:w-2/4 text-sm text-gray-600'>
+                <p>Chào mừng đến với Hệ thống Chăm sóc sức khoẻ, đối tác đáng tin cậy của bạn trong việc quản lý nhu cầu chăm sóc sức khỏe  một cách thuận tiện và hiệu quả.
                     Tại Prescripto, chúng tôi hiểu những thách thức mà các cá nhân phải đối mặt khi đặt lịch hẹn với bác sĩ và quản lý hồ sơ sức khỏe của bản thân.
                 </p>
                 <p>Prescripto cam kết xuất sắc trong công nghệ chăm sóc sức khỏe.
